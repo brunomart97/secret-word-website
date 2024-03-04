@@ -1,0 +1,34 @@
+:root {
+  --primary: #262230;
+  --secondary: #1f1c26;
+  --tertiary: #b9b1c9;
+  --splash: #fe617c;
+  --darkSplash: #d4445c;
+  --rock: #000000;
+}
+
+.lightTheme:root {
+  --primary: #ffffff;
+  --secondary: #eff0f0;
+  --tertiary: #1c2021;
+  --splash: #fe617c;
+  --darkSplash: #d4445c;
+  --rock: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: #fe617c;
+  color: #1c2021;
+}
