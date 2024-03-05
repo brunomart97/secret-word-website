@@ -1,3 +1,12 @@
+'use client'
+import { useLightTheme } from '../hooks/useLightTheme'
+
 export default function Home() {
-  return <main>Home</main>
+  const { isLightTheme, setTheme } = useLightTheme()
+
+  return (
+    <main>
+      <button onClick={setTheme}>Tema</button>
+    </main>
+  )
 }

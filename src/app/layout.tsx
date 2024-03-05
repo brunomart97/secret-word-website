@@ -1,3 +1,4 @@
+import { LightThemeContextProvider } from '../contexts/LightThemeContext'
 import { Poppins } from 'next/font/google'
 import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
@@ -19,8 +20,10 @@ export default function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>{children}</body>
-    </html>
+    <LightThemeContextProvider>
+      <html lang="en">
+        <body className={poppins.className}>{children}</body>
+      </html>
+    </LightThemeContextProvider>
   )
 }
