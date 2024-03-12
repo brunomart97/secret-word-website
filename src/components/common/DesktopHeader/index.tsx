@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ZignixLogo } from '../../../assets/ZignixLogo'
+import { ThemeButton } from '../../ui/ThemeButton'
 import { idGenerator } from '../../../utils/idGenerator'
 import { menuOptions } from '../../../constants/menuOptions'
 
@@ -27,7 +28,9 @@ export const DesktopHeader = () => {
           </ul>
         </nav>
 
-        <div className={styles.optionsButtons}></div>
+        <div className={styles.optionsButtons}>
+          <ThemeButton />
+        </div>
       </div>
     </header>
   )
