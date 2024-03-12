@@ -1,0 +1,70 @@
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  background-color: var(--secondary);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  .headerSubcontainer {
+    width: 100%;
+    height: 100%;
+    max-width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logoContainer {
+      display: flex;
+      align-items: center;
+      margin-right: 50px;
+
+      .logoLink {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .menuContainer {
+      height: 100%;
+
+      .menuSubcontainer {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .menuList {
+          height: 100%;
+          list-style: none;
+          display: flex;
+          align-items: center;
+
+          .menuLink {
+            height: 100%;
+            padding: 0 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: var(--tertiary);
+
+            &:hover {
+              color: var(--splash);
+              border-color: var(--splash);
+            }
+          }
+        }
+      }
+    }
+
+    .optionsButtons {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
