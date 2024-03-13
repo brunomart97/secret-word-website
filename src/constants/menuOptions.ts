@@ -1,5 +1,5 @@
 export const menuOptions = [
   { text: 'Home', link: '/' },
-  { text: 'Jogo', link: '/game' },
+  { text: 'Jogar', link: '/game' },
   { text: 'Sobre', link: '/about' }
 ]

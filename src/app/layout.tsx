@@ -2,6 +2,7 @@
 import { LightThemeContextProvider } from '../contexts/LightThemeContext'
 import { useIsMobileScreen } from '../hooks/useIsMobileScreen'
 import { DesktopHeader } from '../components/common/DesktopHeader'
+import { MobileHeader } from '../components/common/MobileHeader'
 import { Poppins } from 'next/font/google'
 import type { ReactNode } from 'react'
 import '../styles/global.scss'
@@ -22,7 +23,7 @@ export default function RootLayout({
     <LightThemeContextProvider>
       <html lang="en">
         <body className={poppins.className}>
-          {!isMobileScreen && <DesktopHeader />}
+          {isMobileScreen ? <MobileHeader /> : <DesktopHeader />}
           {children}
         </body>
       </html>
