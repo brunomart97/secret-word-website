@@ -22,6 +22,14 @@ export default function RootLayout({
   return (
     <LightThemeContextProvider>
       <html lang="en">
+        <head>
+          <link
+            rel="shortcut icon"
+            href="/logos/zignix-pink-logo.svg"
+            type="image/svg"
+          />
+        </head>
+
         <body className={poppins.className}>
           {isMobileScreen ? <MobileHeader /> : <DesktopHeader />}
           {children}
