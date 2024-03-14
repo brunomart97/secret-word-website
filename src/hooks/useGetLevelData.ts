@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { SECRET_WORD_API_URL } from '../api/config'
-import type { Language, LevelNumber } from '../typings/SecretWord'
+import { ZIGNIX_API_URL } from '../api/config'
+import type { Language, LevelNumber } from '../typings/Zignix'
 import type { LevelData } from '../typings/Level'
 
 export const useGetLevelData = (
@@ -18,7 +18,7 @@ export const useGetLevelData = (
         setLoading(true)
 
         const { data } = await axios.post<LevelData>(
-          `${SECRET_WORD_API_URL}/level/getLevelData`,
+          `${ZIGNIX_API_URL}/level/getLevelData`,
           {
             language,
             levelNumber
