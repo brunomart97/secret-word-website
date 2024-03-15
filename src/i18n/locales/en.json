@@ -1,0 +1,11 @@
+{
+  "i18n": {
+    "commom": {
+      "menuOptions": {
+        "home": { "text": "Home", "link": "/" },
+        "game": { "text": "Play", "link": "/game" },
+        "about": { "text": "About", "link": "/about" }
+      }
+    }
+  }
+}

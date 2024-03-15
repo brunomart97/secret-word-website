@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import { useState } from 'react'
 import { ZignixLogo } from '../../../assets/ZignixLogo'
@@ -5,12 +6,28 @@ import { ThemeButton } from '../../ui/ThemeButton'
 import { RiMenu3Line } from 'react-icons/ri'
 import { CgClose } from 'react-icons/cg'
 import { idGenerator } from '../../../utils/idGenerator'
-import { menuOptions } from '../../../constants/menuOptions'
+import { useTranslations } from 'next-intl'
 
 import styles from './styles.module.scss'
 
 export const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const i18n = useTranslations('i18n')
+
+  const menuOptions = [
+    {
+      text: i18n('commom.menuOptions.home.text'),
+      link: i18n('commom.menuOptions.home.link')
+    },
+    {
+      text: i18n('commom.menuOptions.game.text'),
+      link: i18n('commom.menuOptions.game.link')
+    },
+    {
+      text: i18n('commom.menuOptions.about.text'),
+      link: i18n('commom.menuOptions.about.link')
+    }
+  ]
 
   return (
     <header className={styles.header}>
