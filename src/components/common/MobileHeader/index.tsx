@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { ZignixLogo } from '../../../assets/ZignixLogo'
 import { ThemeButton } from '../../ui/ThemeButton'
+import { LanguageButton } from '../../ui/LanguageButton'
 import { RiMenu3Line } from 'react-icons/ri'
 import { CgClose } from 'react-icons/cg'
 import { idGenerator } from '../../../utils/idGenerator'
@@ -75,7 +76,10 @@ export const MobileHeader = () => {
           </ul>
         </nav>
 
-        <ThemeButton />
+        <div className={styles.optionsButtons}>
+          <ThemeButton />
+          <LanguageButton />
+        </div>
       </div>
     </header>
   )

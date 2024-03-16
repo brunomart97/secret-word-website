@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { ZignixLogo } from '../../../assets/ZignixLogo'
 import { ThemeButton } from '../../ui/ThemeButton'
+import { LanguageButton } from '../../ui/LanguageButton'
 import { idGenerator } from '../../../utils/idGenerator'
 import { useTranslations } from 'next-intl'
 
@@ -48,6 +49,7 @@ export const DesktopHeader = () => {
 
         <div className={styles.optionsButtons}>
           <ThemeButton />
+          <LanguageButton />
         </div>
       </div>
     </header>

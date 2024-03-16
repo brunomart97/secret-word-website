@@ -58,7 +58,7 @@
 
   .menuOpenContainerRight {
     width: 70%;
-    height: calc(100vh - 60px);
+    height: calc(100% - 60px);
     position: fixed;
     top: 60px;
     right: -70%;
@@ -100,6 +100,15 @@
           }
         }
       }
+    }
+
+    .optionsButtons {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      row-gap: 16px;
     }
   }
 }
