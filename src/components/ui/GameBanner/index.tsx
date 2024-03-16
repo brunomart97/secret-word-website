@@ -1,9 +1,16 @@
 import { useTranslations } from 'next-intl'
+import { createSharedPathnamesNavigation } from 'next-intl/navigation'
+import { locales } from '../../../constants/translate'
+import { MainButton } from '../MainButton'
 
 import styles from './styles.module.scss'
 
 export const GameBanner = () => {
+  const { useRouter } = createSharedPathnamesNavigation({
+    locales
+  })
   const i18n = useTranslations('i18n')
+  const router = useRouter()
 
   return (
     <div className={styles.gameBannerContainer}>
@@ -12,6 +19,10 @@ export const GameBanner = () => {
           <h2>{i18n('home.gameBanner.title')}</h2>
           <h3>{i18n('home.gameBanner.subtitle')}</h3>
           <p>{i18n('home.gameBanner.text')}</p>
+          <MainButton
+            text={i18n('home.gameBanner.buttonText')}
+            action={() => router.push('/game')}
+          />
         </div>
 
         <div className={styles.gameBannerRightContent}>
