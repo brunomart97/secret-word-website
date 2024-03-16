@@ -27,15 +27,15 @@ export const LanguageButton = () => {
   const localeOptions = [
     {
       key: 'en',
-      value: 'English'
+      value: 'EN | English'
     },
     {
       key: 'pt',
-      value: 'Português'
+      value: 'PT | Português'
     },
     {
       key: 'es',
-      value: 'Español'
+      value: 'ES | Español'
     }
   ]
 
