@@ -2,6 +2,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 
   .headerSubcontainer {
     width: 100%;
