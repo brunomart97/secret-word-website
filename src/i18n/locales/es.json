@@ -6,6 +6,14 @@
         "game": { "text": "Jugar", "link": "/game" },
         "about": { "text": "Sobre", "link": "/about" }
       }
+    },
+    "home": {
+      "gameBanner": {
+        "title": "Zignix",
+        "subtitle": "¿Aceptarás el desafío?",
+        "text": "Un juego hecho para poner a prueba tu inteligencia. Descubre la palabra secreta con la menor cantidad de pistas posible.",
+        "buttonText": "Jugar ahora"
+      }
     }
   }
 }
