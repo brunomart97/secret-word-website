@@ -14,6 +14,11 @@
         "text": "Um jogo feito para testar sua inteligência. Descubra a palavra secreta com o mínimo de pistas possíveis.",
         "buttonText": "Jogar agora"
       }
+    },
+    "game": {
+      "inputTitle": "Palavra secreta:",
+      "inputClearButtonText": "Limpar",
+      "inputVerifyButtonText": "Verificar palavra"
     }
   }
 }

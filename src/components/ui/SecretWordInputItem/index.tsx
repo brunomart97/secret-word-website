@@ -39,7 +39,7 @@ export const SecretWordInputItem = ({
   }
 
   if (letterKey === '0') {
-    return null
+    return <div className={styles.secretWordInputSpace} />
   }
 
   return (
@@ -49,7 +49,6 @@ export const SecretWordInputItem = ({
       value={secretLetter}
       onChange={handleChange}
       ref={inputRef}
-      style={{ marginRight: nextLetterKey === '0' ? '40px' : '0' }}
     />
   )
 }

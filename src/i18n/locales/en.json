@@ -14,6 +14,11 @@
         "text": "A game made to test your intelligence. Discover the secret word with as few clues as possible.",
         "buttonText": "Play now"
       }
+    },
+    "game": {
+      "inputTitle": "Secret word:",
+      "inputClearButtonText": "To clean",
+      "inputVerifyButtonText": "Check word"
     }
   }
 }

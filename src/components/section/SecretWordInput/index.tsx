@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { createSharedPathnamesNavigation } from 'next-intl/navigation'
+import { useTranslations } from 'next-intl'
 import { locales } from '../../../constants/translate'
 import { useGame } from '../../../hooks/useGame'
 import { MainButton } from '../../ui/MainButton'
@@ -16,6 +17,7 @@ export const SecretWordInput = () => {
   const { useRouter } = createSharedPathnamesNavigation({
     locales
   })
+  const i18n = useTranslations('i18n')
   const router = useRouter()
 
   if (levelDataLoading) {
@@ -36,7 +38,7 @@ export const SecretWordInput = () => {
 
   return (
     <section className={styles.secretWordInputContainer}>
-      <h1 className={styles.secretWordInputTitle}>Palavra secreta:</h1>
+      <h1 className={styles.secretWordInputTitle}>{i18n('game.inputTitle')}</h1>
       <div className={styles.secretWordInputSubcontainer}>
         {encryptedKeyFormated.map((letterKey, index) => (
           <SecretWordInputItem
@@ -53,12 +55,15 @@ export const SecretWordInput = () => {
       </div>
       <div className={styles.secretWordInputButtonsContainer}>
         <MainButton
-          text="Limpar"
+          text={i18n('game.inputClearButtonText')}
           action={handleClearInput}
           color="var(--tertiary)"
           backgroundColor="var(--secondary)"
         />
-        <MainButton text="Verificar palavra" action={() => null} />
+        <MainButton
+          text={i18n('game.inputVerifyButtonText')}
+          action={() => null}
+        />
       </div>
     </section>
   )

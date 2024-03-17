@@ -26,10 +26,18 @@
   .secretWordInputButtonsContainer {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    column-gap: 32px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 16px;
     flex-wrap: nowrap;
     margin-top: 24px;
+
+    @media (min-width: 905px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      column-gap: 32px;
+    }
   }
 }
