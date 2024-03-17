@@ -1,4 +1,4 @@
-export const idGenerator = (text: string): string => {
+export const idGenerator = (text: string | number): string => {
   const randomString = Math.random().toString(16).substring(2, 8)
   const combinedString = `${text}-${randomString}`
   const hash = require('crypto')
