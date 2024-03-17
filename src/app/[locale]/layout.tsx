@@ -1,4 +1,5 @@
 import { LightThemeContextProvider } from '../../contexts/LightThemeContext'
+import { GameContextProvider } from '../../contexts/GameContext'
 import { SelectHeader } from '../../components/common/SelectHeader'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
@@ -17,22 +18,24 @@ export default async function RootLayout({
 
   return (
     <LightThemeContextProvider>
-      <html lang={locale}>
-        <NextIntlClientProvider messages={messages}>
-          <head>
-            <link
-              rel="shortcut icon"
-              href="/logos/zignix-pink-logo.svg"
-              type="image/svg"
-            />
-          </head>
+      <GameContextProvider>
+        <html lang={locale}>
+          <NextIntlClientProvider messages={messages}>
+            <head>
+              <link
+                rel="shortcut icon"
+                href="/logos/zignix-pink-logo.svg"
+                type="image/svg"
+              />
+            </head>
 
-          <body>
-            <SelectHeader />
-            {children}
-          </body>
-        </NextIntlClientProvider>
-      </html>
+            <body>
+              <SelectHeader />
+              {children}
+            </body>
+          </NextIntlClientProvider>
+        </html>
+      </GameContextProvider>
     </LightThemeContextProvider>
   )
 }
