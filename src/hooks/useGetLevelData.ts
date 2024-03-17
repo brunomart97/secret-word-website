@@ -12,6 +12,8 @@ export const useGetLevelData = (
   const [levelData, setLevelData] = useState<LevelData>()
   const [loading, setLoading] = useState(false)
 
+  const envApiAppKey = process.env.NEXT_PUBLIC_ZIGNIX_APP_KEY ?? ''
+
   useEffect(() => {
     const request = async () => {
       try {
@@ -22,19 +24,28 @@ export const useGetLevelData = (
           {
             language,
             levelNumber
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${envApiAppKey}`
+            }
           }
         )
 
+        if (!data) {
+          return
+        }
+
         setLevelData(data)
-      } catch {
-        throw new Error('Fail in levelData request')
+      } catch (error) {
+        console.error('Error fetching levelData:', error)
       } finally {
         setLoading(false)
       }
     }
 
     request()
-  }, [])
+  }, [language, levelNumber])
 
   return { levelData, loading }
 }

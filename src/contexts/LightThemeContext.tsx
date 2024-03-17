@@ -12,9 +12,9 @@ type LightThemeProviderProps = {
 
 export const LightThemeContext = createContext({} as LightThemeContextProps)
 
-export function LightThemeContextProvider({
+export const LightThemeContextProvider = ({
   children
-}: LightThemeProviderProps) {
+}: LightThemeProviderProps) => {
   const [isLightTheme, setIsLightTheme] = useState(false)
 
   useEffect(() => {
