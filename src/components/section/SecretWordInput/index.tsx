@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { locales } from '../../../constants/translate'
 import { useGame } from '../../../hooks/useGame'
 import { MainButton } from '../../ui/MainButton'
+import { MatchPoint } from '../../ui/MatchPoint'
 import { SecretWordInputItem } from '../../ui/SecretWordInputItem'
 import { idGenerator } from '../../../utils/idGenerator'
 
@@ -38,7 +39,8 @@ export const SecretWordInput = () => {
 
   return (
     <section className={styles.secretWordInputContainer}>
-      <h1 className={styles.secretWordInputTitle}>{i18n('game.inputTitle')}</h1>
+      <MatchPoint />
+      <h2 className={styles.secretWordInputTitle}>{i18n('game.inputTitle')}</h2>
       <div className={styles.secretWordInputSubcontainer}>
         {encryptedKeyFormated.map((letterKey, index) => (
           <SecretWordInputItem

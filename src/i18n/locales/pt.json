@@ -16,6 +16,7 @@
       }
     },
     "game": {
+      "descriptionMatchPoints": "Pontos da partida",
       "inputTitle": "Palavra secreta:",
       "inputClearButtonText": "Limpar",
       "inputVerifyButtonText": "Verificar palavra"

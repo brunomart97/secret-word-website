@@ -16,6 +16,7 @@
       }
     },
     "game": {
+      "descriptionMatchPoints": "Match points",
       "inputTitle": "Secret word:",
       "inputClearButtonText": "To clean",
       "inputVerifyButtonText": "Check word"
