@@ -1,5 +1,6 @@
 import { MatchPoint } from '../../../components/ui/MatchPoint'
 import { SecretWordInput } from '../../../components/section/SecretWordInput'
+import { Clues } from '../../../components/section/Clues'
 
 import styles from './styles.module.scss'
 
@@ -8,6 +9,7 @@ export default function Game() {
     <main className={styles.gameContainer}>
       <MatchPoint />
       <SecretWordInput />
+      <Clues />
     </main>
   )
 }

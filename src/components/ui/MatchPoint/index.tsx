@@ -11,7 +11,12 @@ export const MatchPoint = () => {
 
   return (
     <div className={styles.matchPointContainer}>
-      <CountUp className={styles.matchPointNumber} end={matchPoints ?? 0} />
+      <CountUp
+        className={styles.matchPointNumber}
+        end={matchPoints ?? 0}
+        decimals={2}
+        duration={1.5}
+      />
       <span className={styles.matchPointDescription}>
         {i18n('game.descriptionMatchPoints')}
       </span>

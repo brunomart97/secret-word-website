@@ -19,7 +19,9 @@
       "descriptionMatchPoints": "Puntos de partido",
       "inputTitle": "Palabra secreta:",
       "inputClearButtonText": "Limpiar",
-      "inputVerifyButtonText": "Comprobar palabra"
+      "inputVerifyButtonText": "Comprobar palabra",
+      "cluesTitle": "Pistas:",
+      "cluesDescription": "Perderás 6.5 puntos por cada pista utilizada."
     }
   }
 }

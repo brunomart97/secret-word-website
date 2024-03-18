@@ -14,6 +14,8 @@ export type GameContextProps = {
   levelDataLoading?: boolean
   matchPoints?: number
   setMatchPoints?: (matchPoints: number) => void
+  chosenClues?: string[]
+  setChosenClues?: (chosenClues: string[]) => void
 }
 
 type GameProviderProps = {
@@ -25,6 +27,7 @@ export const GameContext = createContext({} as GameContextProps)
 export const GameContextProvider = ({ children }: GameProviderProps) => {
   const [playerLevel, setPlayerLevel] = useState(1)
   const [matchPoints, setMatchPoints] = useState(100)
+  const [chosenClues, setChosenClues] = useState<string[]>([])
 
   //  searching for language
   const locale = useLocale()
@@ -53,6 +56,13 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     setLocalStorage('level', JSON.stringify(playerLevel))
   }, [playerLevel])
 
+  // check if the matchpoint was negative and set it to zero
+  useEffect(() => {
+    if (matchPoints < 0) {
+      setMatchPoints(0)
+    }
+  }, [matchPoints])
+
   return (
     <GameContext.Provider
       value={{
@@ -60,6 +70,8 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
         setPlayerLevel,
         matchPoints,
         setMatchPoints,
+        chosenClues,
+        setChosenClues,
         levelData,
         levelDataLoading
       }}
