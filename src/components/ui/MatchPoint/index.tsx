@@ -1,3 +1,4 @@
+'use client'
 import { useTranslations } from 'next-intl'
 import { useGame } from '../../../hooks/useGame'
 import CountUp from 'react-countup'
