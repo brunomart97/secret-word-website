@@ -29,7 +29,7 @@ export const SecretWordInput = () => {
     // router.push('/')
   }
 
-  const encryptedKeyFormated = levelData.encryptedKey.split('')
+  const keyMoldFormated = levelData.keyMold.split('')
 
   const handleClearInput = () => {
     setSecretWord([])
@@ -40,10 +40,10 @@ export const SecretWordInput = () => {
     <section className={styles.secretWordInputContainer}>
       <h2 className={styles.secretWordInputTitle}>{i18n('game.inputTitle')}</h2>
       <div className={styles.secretWordInputSubcontainer}>
-        {encryptedKeyFormated.map((letterKey, index) => (
+        {keyMoldFormated.map((letterKey, index) => (
           <SecretWordInputItem
             letterKey={letterKey}
-            nextLetterKey={encryptedKeyFormated[index + 1]}
+            nextLetterKey={keyMoldFormated[index + 1]}
             index={index}
             inputFocusIndex={inputFocusIndex}
             setInputFocusIndex={setInputFocusIndex}

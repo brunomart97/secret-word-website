@@ -12,7 +12,7 @@ export const useGetLevelData = (
   const [levelData, setLevelData] = useState<LevelData>()
   const [loading, setLoading] = useState(false)
 
-  const envApiAppKey = process.env.NEXT_PUBLIC_ZIGNIX_APP_KEY ?? ''
+  const envNextPublicZignixApiKey = process.env.NEXT_PUBLIC_ZIGNIX_API_KEY ?? ''
 
   useEffect(() => {
     const request = async () => {
@@ -27,7 +27,7 @@ export const useGetLevelData = (
           },
           {
             headers: {
-              Authorization: `Bearer ${envApiAppKey}`
+              Authorization: `Bearer ${envNextPublicZignixApiKey}`
             }
           }
         )

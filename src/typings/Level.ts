@@ -1,5 +1,5 @@
 export type LevelData = {
   clues: string[]
-  encryptedKey: string
+  keyMold: string
   id: string
 }

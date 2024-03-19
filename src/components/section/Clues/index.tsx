@@ -26,7 +26,7 @@ export const Clues = () => {
       <div className={styles.cluesSubcontainer}>
         {levelData?.clues?.map((clue, index) => (
           <ClueCard
-            word={clue}
+            clue={clue}
             number={index + 1}
             chosenClues={chosenClues}
             setChosenClues={setChosenClues}

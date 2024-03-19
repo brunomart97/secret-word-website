@@ -1,10 +1,12 @@
+'use client'
 import { useMemo } from 'react'
+import jwt from 'jsonwebtoken'
 import { ZignixLogo } from '../../../assets/ZignixLogo'
 
 import styles from './styles.module.scss'
 
 type ClueCardProps = {
-  word: string
+  clue: string
   number: number
   chosenClues?: string[]
   setChosenClues?: (chosenClues: string[]) => void
@@ -13,15 +15,21 @@ type ClueCardProps = {
 }
 
 export const ClueCard = ({
-  word,
+  clue,
   number,
   chosenClues,
   setChosenClues,
   matchPoints,
   setMatchPoints
 }: ClueCardProps) => {
+  const decodedWord = jwt.decode(clue)
+  const word: string =
+    decodedWord &&
+    typeof decodedWord !== 'string' &&
+    (decodedWord as jwt.JwtPayload).clue
+
   const isChosen = useMemo(
-    () => !!chosenClues?.find((clue) => clue === word),
+    () => decodedWord && !!chosenClues?.find((clue) => clue === word),
     [chosenClues]
   )
 
