@@ -37,6 +37,16 @@ a {
 }
 
 ::selection {
-  background-color: #fe617c;
-  color: #1c2021;
+  background-color: var(--splash);
+  color: var(--rock);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  border-radius: 10px;
 }
