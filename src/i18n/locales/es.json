@@ -20,6 +20,7 @@
       "inputTitle": "Palabra secreta:",
       "inputClearButtonText": "Limpiar",
       "inputVerifyButtonText": "Comprobar palabra",
+      "inputVerifyButtonLoadingText": "Comprobando palabra",
       "cluesTitle": "Pistas:",
       "cluesDescription": "Perderás 6.5 puntos por cada pista utilizada."
     }

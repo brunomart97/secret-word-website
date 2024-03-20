@@ -11,7 +11,13 @@ import styles from './styles.module.scss'
 export const SecretWordInput = () => {
   const [inputFocusIndex, setInputFocusIndex] = useState(0)
   const [inputSecretWord, setInputSecretWord] = useState<string[]>([])
-  const { levelData, levelDataLoading, setSecretWord, playerLevel } = useGame()
+  const {
+    levelData,
+    levelDataLoading,
+    setSecretWord,
+    playerLevel,
+    levelKeyLoading
+  } = useGame()
   const i18n = useTranslations('i18n')
 
   // clearing the inputs when you pass a level
@@ -72,7 +78,11 @@ export const SecretWordInput = () => {
           backgroundColor="var(--secondary)"
         />
         <MainButton
-          text={i18n('game.inputVerifyButtonText')}
+          text={
+            levelKeyLoading
+              ? i18n('game.inputVerifyButtonLoadingText')
+              : i18n('game.inputVerifyButtonText')
+          }
           action={verifySecretWord}
         />
       </div>
