@@ -16,7 +16,9 @@
       }
     },
     "game": {
-      "descriptionMatchPoints": "Match points",
+      "playerLevelText": "Level",
+      "matchPointsText": "Match points",
+      "totalPointsText": "Total points",
       "inputTitle": "Secret word:",
       "inputClearButtonText": "To clean",
       "inputVerifyButtonText": "Check word",

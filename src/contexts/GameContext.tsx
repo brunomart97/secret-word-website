@@ -73,13 +73,15 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
   useEffect(() => {
     const currentPlayerLevel = getLocalStorage('level')
 
-    if (!currentPlayerLevel || JSON.parse(currentPlayerLevel) === 0) {
-      setPlayerLevel(1)
-      setLocalStorage('level', JSON.stringify(1))
+    if (!currentPlayerLevel) {
       return
     }
 
-    setPlayerLevel(JSON.parse(currentPlayerLevel))
+    const parsedPlayerLevel = JSON.parse(currentPlayerLevel)
+
+    if (parsedPlayerLevel > playerLevel) {
+      setPlayerLevel(parsedPlayerLevel)
+    }
   }, [])
 
   // setting the player level when he passes the level

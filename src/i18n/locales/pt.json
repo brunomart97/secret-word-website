@@ -16,7 +16,9 @@
       }
     },
     "game": {
-      "descriptionMatchPoints": "Pontos da partida",
+      "playerLevelText": "Nível",
+      "matchPointsText": "Pontos da partida",
+      "totalPointsText": "Total de pontos",
       "inputTitle": "Palavra secreta:",
       "inputClearButtonText": "Limpar",
       "inputVerifyButtonText": "Verificar palavra",

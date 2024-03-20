@@ -11,7 +11,7 @@ import styles from './styles.module.scss'
 export const DesktopHeader = () => {
   const i18n = useTranslations('i18n')
 
-  const menuOptions = [
+  const menuList = [
     {
       text: i18n('commom.menuOptions.home.text'),
       link: i18n('commom.menuOptions.home.link')
@@ -37,7 +37,7 @@ export const DesktopHeader = () => {
 
         <nav className={styles.menuContainer}>
           <ul className={styles.menuSubcontainer}>
-            {menuOptions.map(({ text, link }) => (
+            {menuList.map(({ text, link }) => (
               <li className={styles.menuList} key={idGenerator(text)}>
                 <Link href={link} className={styles.menuLink}>
                   {text}
