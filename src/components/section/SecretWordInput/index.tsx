@@ -1,8 +1,6 @@
 'use client'
-import { useState } from 'react'
-import { createSharedPathnamesNavigation } from 'next-intl/navigation'
+import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
-import { locales } from '../../../constants/translate'
 import { useGame } from '../../../hooks/useGame'
 import { MainButton } from '../../ui/MainButton'
 import { SecretWordInputItem } from '../../ui/SecretWordInputItem'
@@ -12,13 +10,27 @@ import styles from './styles.module.scss'
 
 export const SecretWordInput = () => {
   const [inputFocusIndex, setInputFocusIndex] = useState(0)
-  const [secretWord, setSecretWord] = useState<string[]>([])
-  const { levelData, levelDataLoading } = useGame()
-  const { useRouter } = createSharedPathnamesNavigation({
-    locales
-  })
+  const [inputSecretWord, setInputSecretWord] = useState<string[]>([])
+  const { levelData, levelDataLoading, setSecretWord, playerLevel } = useGame()
   const i18n = useTranslations('i18n')
-  const router = useRouter()
+
+  // clearing the inputs when you pass a level
+  useEffect(() => {
+    setInputSecretWord([])
+  }, [playerLevel])
+
+  const verifySecretWord = () => {
+    if (inputSecretWord.length > 0) {
+      // converting the letters typed in the input into a string
+      const formatedSecretWord = inputSecretWord
+        .map((letter) => (letter ? letter : ' '))
+        .join('')
+
+      setSecretWord?.(formatedSecretWord)
+    } else {
+      setSecretWord?.('')
+    }
+  }
 
   if (levelDataLoading) {
     return <h2>Carregando...</h2>
@@ -26,13 +38,12 @@ export const SecretWordInput = () => {
 
   if (!levelData) {
     return null
-    // router.push('/')
   }
 
   const keyMoldFormated = levelData.keyMold.split('')
 
   const handleClearInput = () => {
-    setSecretWord([])
+    setInputSecretWord([])
     setInputFocusIndex(0)
   }
 
@@ -47,8 +58,8 @@ export const SecretWordInput = () => {
             index={index}
             inputFocusIndex={inputFocusIndex}
             setInputFocusIndex={setInputFocusIndex}
-            secretWord={secretWord}
-            setSecretWord={setSecretWord}
+            inputSecretWord={inputSecretWord}
+            setInputSecretWord={setInputSecretWord}
             key={idGenerator(index)}
           />
         ))}
@@ -62,7 +73,7 @@ export const SecretWordInput = () => {
         />
         <MainButton
           text={i18n('game.inputVerifyButtonText')}
-          action={() => null}
+          action={verifySecretWord}
         />
       </div>
     </section>

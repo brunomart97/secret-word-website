@@ -3,3 +3,8 @@ export type LevelData = {
   keyMold: string
   id: string
 }
+
+export type LevelKey = {
+  keyWasDiscovered: boolean
+  key: string
+}

@@ -8,8 +8,8 @@ type SecretWordInputItemProps = {
   index: number
   inputFocusIndex: number
   setInputFocusIndex: (inputFocusIndex: number) => void
-  secretWord: string[]
-  setSecretWord: (secretWord: string[]) => void
+  inputSecretWord: string[]
+  setInputSecretWord: (inputSecretWord: string[]) => void
 }
 
 export const SecretWordInputItem = ({
@@ -18,23 +18,23 @@ export const SecretWordInputItem = ({
   index,
   inputFocusIndex,
   setInputFocusIndex,
-  secretWord,
-  setSecretWord
+  inputSecretWord,
+  setInputSecretWord
 }: SecretWordInputItemProps) => {
-  const [secretLetter, setSecretLetter] = useState(secretWord[index])
+  const [secretLetter, setSecretLetter] = useState(inputSecretWord[index])
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (index === inputFocusIndex && letterKey === '1') {
       inputRef?.current?.focus()
     }
-  }, [secretWord])
+  }, [inputSecretWord])
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSecretLetter(event.target.value)
-    const secretWordCopy = [...secretWord]
+    const secretWordCopy = [...inputSecretWord]
     secretWordCopy[index] = event.target.value
-    setSecretWord(secretWordCopy)
+    setInputSecretWord(secretWordCopy)
     setInputFocusIndex(nextLetterKey === '1' ? index + 1 : index + 2)
   }
 
