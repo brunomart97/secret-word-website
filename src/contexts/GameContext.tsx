@@ -69,18 +69,24 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     }
   }, [levelKey])
 
-  // checking the player's level initially
+  // checking the player's level and total points initially
   useEffect(() => {
     const currentPlayerLevel = getLocalStorage('level')
+    const currentTotalPoints = getLocalStorage('points')
 
-    if (!currentPlayerLevel) {
+    if (!currentPlayerLevel || !currentTotalPoints) {
       return
     }
 
     const parsedPlayerLevel = JSON.parse(currentPlayerLevel)
+    const parsedTotalPoints = JSON.parse(currentTotalPoints)
 
     if (parsedPlayerLevel > playerLevel) {
       setPlayerLevel(parsedPlayerLevel)
+    }
+
+    if (parsedTotalPoints > totalPoints) {
+      setTotalPoints(parsedTotalPoints)
     }
   }, [])
 
@@ -88,6 +94,11 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
   useEffect(() => {
     setLocalStorage('level', JSON.stringify(playerLevel))
   }, [playerLevel])
+
+  // setting the player's point total when he earns points
+  useEffect(() => {
+    setLocalStorage('points', JSON.stringify(totalPoints))
+  }, [totalPoints])
 
   // check if the matchpoint was negative and set it to zero
   useEffect(() => {

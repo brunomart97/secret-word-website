@@ -13,6 +13,9 @@
         "subtitle": "Vai encarar o desafio?",
         "text": "Um jogo feito para testar sua inteligência. Descubra a palavra secreta com o mínimo de pistas possíveis.",
         "buttonText": "Jogar agora"
+      },
+      "gameSummary": {
+        "resetLevelButtonText": "Resetar jogo"
       }
     },
     "game": {

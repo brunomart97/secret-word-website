@@ -13,6 +13,9 @@
         "subtitle": "Will you accept the challenge?",
         "text": "A game made to test your intelligence. Discover the secret word with as few clues as possible.",
         "buttonText": "Play now"
+      },
+      "gameSummary": {
+        "resetLevelButtonText": "Reset game"
       }
     },
     "game": {
