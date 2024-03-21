@@ -13,22 +13,30 @@ export const Scorebox = () => {
   const scoreList = [
     {
       value: playerLevel,
-      text: i18n('game.playerLevelText')
+      text: i18n('game.playerLevelText'),
+      animationDuration: 0
     },
     {
       value: matchPoints,
-      text: i18n('game.matchPointsText')
+      text: i18n('game.matchPointsText'),
+      animationDuration: 1.5
     },
     {
       value: totalPoints,
-      text: i18n('game.totalPointsText')
+      text: i18n('game.totalPointsText'),
+      animationDuration: 0
     }
   ]
 
   return (
     <section className={styles.scoreboxContainer}>
-      {scoreList.map(({ value, text }) => (
-        <Scoreboard value={value ?? 0} text={text} key={idGenerator(text)} />
+      {scoreList.map(({ value, text, animationDuration }) => (
+        <Scoreboard
+          value={value ?? 0}
+          text={text}
+          animationDuration={animationDuration}
+          key={idGenerator(text)}
+        />
       ))}
     </section>
   )
