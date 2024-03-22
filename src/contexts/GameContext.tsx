@@ -23,6 +23,7 @@ export type GameContextProps = {
   levelDataLoading?: boolean
   secretWord?: string
   setSecretWord?: (secretWord: string) => void
+  resetGame?: () => void
 }
 
 type GameProviderProps = {
@@ -107,6 +108,14 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     }
   }, [matchPoints])
 
+  const resetGame = () => {
+    setTotalPoints(0)
+    setPlayerLevel(1)
+    setMatchPoints(100)
+    setChosenClues([])
+    setSecretWord('')
+  }
+
   return (
     <GameContext.Provider
       value={{
@@ -123,7 +132,8 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
         levelData,
         levelDataLoading,
         levelKey,
-        levelKeyLoading
+        levelKeyLoading,
+        resetGame
       }}
     >
       {children}

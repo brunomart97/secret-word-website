@@ -10,7 +10,7 @@ import styles from './styles.module.scss'
 
 export const GameSummary = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
-  const { playerLevel, totalPoints } = useGame()
+  const { playerLevel, totalPoints, resetGame } = useGame()
   const i18n = useTranslations('i18n')
 
   const summaryList = [
@@ -58,22 +58,25 @@ export const GameSummary = () => {
         <div className={styles.modalContentContainer}>
           <div className={styles.modalContentTexts}>
             <p className={styles.modalContentTitle}>
-              Tem certeza que deseja resetar seu jogo?
+              {i18n('home.gameSummary.resetModalTitle')}
             </p>
             <p className={styles.modalContentSubtitle}>
-              Essa ação fará com que você perca todo o seu progresso no jogo.
+              {i18n('home.gameSummary.resetModalSubtitle')}
             </p>
           </div>
 
           <div className={styles.modalContentButtons}>
             <MainButton
-              text="Sim"
-              action={() => setModalIsOpen(false)}
-              color="var(--tertiary)"
-              backgroundColor="var(--secondary)"
+              text={i18n('home.gameSummary.resetModalButtonReset')}
+              action={() => {
+                resetGame?.()
+                setModalIsOpen(false)
+              }}
+              color="var(--secondary)"
+              backgroundColor="var(--splash)"
             />
             <MainButton
-              text="Não"
+              text={i18n('home.gameSummary.resetModalButtonCancel')}
               action={() => setModalIsOpen(false)}
               color="var(--tertiary)"
               backgroundColor="var(--secondary)"

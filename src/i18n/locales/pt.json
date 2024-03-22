@@ -15,7 +15,11 @@
         "buttonText": "Jogar agora"
       },
       "gameSummary": {
-        "resetLevelButtonText": "Resetar jogo"
+        "resetLevelButtonText": "Resetar jogo",
+        "resetModalTitle": "Tem certeza que quer resetar seu jogo?",
+        "resetModalSubtitle": "Essa ação fará com que você perca todo o seu progresso salvo no jogo.",
+        "resetModalButtonReset": "Resetar",
+        "resetModalButtonCancel": "Cancelar"
       }
     },
     "game": {
