@@ -4,6 +4,7 @@ import { Line } from 'react-chartjs-2'
 import { useGame } from '../../../hooks/useGame'
 import { useTranslations } from 'next-intl'
 import { idGenerator } from '../../../utils/idGenerator'
+import { generateLastLevels } from '../../../utils/generateLastLevels'
 import { MainButton } from '../MainButton'
 import { Modal } from '../../section/Modal'
 import 'chart.js/auto'
@@ -12,23 +13,23 @@ import styles from './styles.module.scss'
 
 export const GameSummary = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
-  const { playerLevel, totalPoints, resetGame } = useGame()
+  const { playerLevel, totalPoints, resetGame, lastPoints } = useGame()
   const i18n = useTranslations('i18n')
 
   const chartData = useMemo(
     () => ({
-      labels: ['', '', '', '', '', '', '', '', '', ''],
+      labels: generateLastLevels(playerLevel ? playerLevel - 1 : 0),
       datasets: [
         {
           label: '',
-          data: [51, 23, 85, 25, 51, 23, 85, 25, 25, 51],
+          data: lastPoints,
           fill: true,
           backgroundColor: 'transparent',
           borderColor: '#d4445c'
         }
       ]
     }),
-    []
+    [lastPoints, playerLevel]
   )
 
   const chartOptions = {

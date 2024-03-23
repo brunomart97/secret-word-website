@@ -2,7 +2,7 @@
   "i18n": {
     "commom": {
       "menuOptions": {
-        "home": { "text": "Home", "link": "/" },
+        "home": { "text": "Panel", "link": "/" },
         "game": { "text": "Jugar", "link": "/game" },
         "about": { "text": "Sobre", "link": "/about" }
       }

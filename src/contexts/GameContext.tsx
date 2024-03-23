@@ -17,6 +17,7 @@ export type GameContextProps = {
   levelKeyLoading?: boolean
   matchPoints?: number
   setMatchPoints?: (matchPoints: number) => void
+  lastPoints?: number[]
   chosenClues?: string[]
   setChosenClues?: (chosenClues: string[]) => void
   levelData?: LevelData
@@ -36,6 +37,9 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
   const [totalPoints, setTotalPoints] = useState(0)
   const [playerLevel, setPlayerLevel] = useState(1)
   const [matchPoints, setMatchPoints] = useState(100)
+  const [lastPoints, setLastPoints] = useState(
+    Array.from({ length: 10 }, () => 0)
+  )
   const [chosenClues, setChosenClues] = useState<string[]>([])
   const [secretWord, setSecretWord] = useState('')
 
@@ -61,6 +65,13 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     }
 
     if (levelKey.keyWasDiscovered && levelKey.key !== 'unacceptable') {
+      // record the last score
+      const lastPointsCopy = [...lastPoints]
+      lastPointsCopy.shift()
+      lastPointsCopy.push(matchPoints)
+      setLastPoints(lastPointsCopy)
+
+      // cleaning up the states
       setTotalPoints(totalPoints + matchPoints)
       setMatchPoints(100)
       setSecretWord('')
@@ -72,15 +83,15 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
 
   // checking the player's level and total points initially
   useEffect(() => {
-    const currentPlayerLevel = getLocalStorage('level')
-    const currentTotalPoints = getLocalStorage('points')
+    const storedPlayerLevel = getLocalStorage('level')
+    const storedTotalPoints = getLocalStorage('points')
 
-    if (!currentPlayerLevel || !currentTotalPoints) {
+    if (!storedPlayerLevel || !storedTotalPoints) {
       return
     }
 
-    const parsedPlayerLevel = JSON.parse(currentPlayerLevel)
-    const parsedTotalPoints = JSON.parse(currentTotalPoints)
+    const parsedPlayerLevel = JSON.parse(storedPlayerLevel)
+    const parsedTotalPoints = JSON.parse(storedTotalPoints)
 
     if (parsedPlayerLevel > playerLevel) {
       setPlayerLevel(parsedPlayerLevel)
@@ -108,12 +119,45 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     }
   }, [matchPoints])
 
+  // handle with last 10 points
+  useEffect(() => {
+    const storedLastPoints = getLocalStorage('lastPoints')
+
+    if (!storedLastPoints) {
+      setLocalStorage('lastPoints', JSON.stringify(lastPoints))
+      return
+    }
+
+    const parsedLastPoints = JSON.parse(storedLastPoints)
+    setLastPoints(parsedLastPoints as number[])
+  }, [])
+
+  useEffect(() => {
+    const storedPlayerLevel = getLocalStorage('level')
+
+    if (!storedPlayerLevel) {
+      return
+    }
+
+    const parsedPlayerLevel = JSON.parse(storedPlayerLevel)
+
+    if (parsedPlayerLevel > 1) {
+      setLocalStorage('lastPoints', JSON.stringify(lastPoints))
+    }
+  }, [lastPoints])
+
+  // reset game function
   const resetGame = () => {
     setTotalPoints(0)
     setPlayerLevel(1)
     setMatchPoints(100)
     setChosenClues([])
     setSecretWord('')
+    setLastPoints(Array.from({ length: 10 }, () => 0))
+    setLocalStorage(
+      'lastPoints',
+      JSON.stringify(Array.from({ length: 10 }, () => 0))
+    )
   }
 
   return (
@@ -125,6 +169,7 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
         setPlayerLevel,
         matchPoints,
         setMatchPoints,
+        lastPoints,
         chosenClues,
         setChosenClues,
         secretWord,
