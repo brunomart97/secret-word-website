@@ -5,6 +5,7 @@ import { useGame } from '../../../hooks/useGame'
 import { MainButton } from '../../ui/MainButton'
 import { SecretWordInputItem } from '../../ui/SecretWordInputItem'
 import { idGenerator } from '../../../utils/idGenerator'
+import { Skeleton } from '../../ui/Skeleton'
 
 import styles from './styles.module.scss'
 
@@ -39,7 +40,7 @@ export const SecretWordInput = () => {
   }
 
   if (levelDataLoading) {
-    return <h2>Carregando...</h2>
+    return <Skeleton width="100%" height="300px" margin="32px 0 0" />
   }
 
   if (!levelData) {
@@ -70,6 +71,7 @@ export const SecretWordInput = () => {
           />
         ))}
       </div>
+
       <div className={styles.secretWordInputButtonsContainer}>
         <MainButton
           text={i18n('game.inputClearButtonText')}

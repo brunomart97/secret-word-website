@@ -4,12 +4,14 @@ import { useGame } from '../../../hooks/useGame'
 import { idGenerator } from '../../../utils/idGenerator'
 import { useTranslations } from 'next-intl'
 import { ClueCard } from '../../ui/ClueCard'
+import { Skeleton } from '../../ui/Skeleton'
 
 import styles from './styles.module.scss'
 
 export const Clues = () => {
   const {
     levelData,
+    levelDataLoading,
     chosenClues,
     setChosenClues,
     matchPoints,
@@ -24,17 +26,27 @@ export const Clues = () => {
         {i18n('game.cluesDescription')}
       </span>
       <div className={styles.cluesSubcontainer}>
-        {levelData?.clues?.map((clue, index) => (
-          <ClueCard
-            clue={clue}
-            number={index + 1}
-            chosenClues={chosenClues}
-            setChosenClues={setChosenClues}
-            matchPoints={matchPoints}
-            setMatchPoints={setMatchPoints}
-            key={idGenerator(clue)}
-          />
-        ))}
+        {levelDataLoading ? (
+          <>
+            {Array.from({ length: 16 }).map((_, index) => (
+              <Skeleton width="100%" height="180px" key={idGenerator(index)} />
+            ))}
+          </>
+        ) : (
+          <>
+            {levelData?.clues?.map((clue, index) => (
+              <ClueCard
+                clue={clue}
+                number={index + 1}
+                chosenClues={chosenClues}
+                setChosenClues={setChosenClues}
+                matchPoints={matchPoints}
+                setMatchPoints={setMatchPoints}
+                key={idGenerator(clue)}
+              />
+            ))}
+          </>
+        )}
       </div>
     </section>
   )
