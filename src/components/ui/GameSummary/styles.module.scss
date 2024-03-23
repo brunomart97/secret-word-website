@@ -85,10 +85,19 @@
     }
 
     .modalContentSubtitle {
+      display: flex;
       font-size: 12px;
       font-weight: 400;
       color: var(--tertiary);
       text-align: center;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        padding: 2px 4px 0 0;
+        flex-shrink: 0;
+        box-sizing: border-box;
+      }
     }
   }
 

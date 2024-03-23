@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import CountUp from 'react-countup'
 import { Line } from 'react-chartjs-2'
+import { LuInfo } from 'react-icons/lu'
 import { useGame } from '../../../hooks/useGame'
 import { useTranslations } from 'next-intl'
 import { idGenerator } from '../../../utils/idGenerator'
@@ -103,6 +104,7 @@ export const GameSummary = () => {
               {i18n('home.gameSummary.resetModalTitle')}
             </p>
             <p className={styles.modalContentSubtitle}>
+              <LuInfo color="var(--tertiary)" />
               {i18n('home.gameSummary.resetModalSubtitle')}
             </p>
           </div>
