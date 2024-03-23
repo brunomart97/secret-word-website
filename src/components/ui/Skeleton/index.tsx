@@ -15,7 +15,7 @@ export const Skeleton = ({
   backgroundColor = 'var(--secondary)',
   shimmerColor = 'var(--primary)',
   borderRadius = '5px',
-  margin = '32px 0'
+  margin
 }: SkeletonProps) => {
   return (
     <div

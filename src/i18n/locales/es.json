@@ -15,6 +15,7 @@
         "buttonText": "Jugar ahora"
       },
       "gameSummary": {
+        "summaryTitle": "Resumen del juego",
         "resetLevelButtonText": "Reiniciar el juego",
         "resetModalTitle": "¿Estás seguro que quieres reiniciar el juego?",
         "resetModalSubtitle": "Esta acción hará que pierdas todo el progreso del juego guardado.",

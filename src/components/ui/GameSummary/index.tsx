@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import CountUp from 'react-countup'
+import { Line } from 'react-chartjs-2'
 import { useGame } from '../../../hooks/useGame'
 import { useTranslations } from 'next-intl'
 import { idGenerator } from '../../../utils/idGenerator'
 import { MainButton } from '../MainButton'
 import { Modal } from '../../section/Modal'
+import 'chart.js/auto'
 
 import styles from './styles.module.scss'
 
@@ -13,14 +15,46 @@ export const GameSummary = () => {
   const { playerLevel, totalPoints, resetGame } = useGame()
   const i18n = useTranslations('i18n')
 
-  const summaryList = [
+  const chartData = useMemo(
+    () => ({
+      labels: ['', '', '', '', '', '', '', '', '', ''],
+      datasets: [
+        {
+          label: '',
+          data: [51, 23, 85, 25, 51, 23, 85, 25, 25, 51],
+          fill: true,
+          backgroundColor: 'transparent',
+          borderColor: '#d4445c'
+        }
+      ]
+    }),
+    []
+  )
+
+  const chartOptions = {
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      x: {
+        display: false
+      },
+      y: {
+        display: false
+      }
+    }
+  }
+
+  const gameInfo = [
     {
-      value: playerLevel,
-      text: i18n('game.playerLevelText')
+      text: i18n('game.playerLevelText'),
+      value: playerLevel
     },
     {
-      value: totalPoints,
-      text: i18n('game.totalPointsText')
+      text: i18n('game.totalPointsText'),
+      value: totalPoints
     }
   ]
 
@@ -28,21 +62,28 @@ export const GameSummary = () => {
     <>
       <div className={styles.gameSummaryContainer}>
         <div className={styles.gameSummarySubcontainer}>
-          <div className={styles.gameSummaryLevel}>
-            {summaryList.map(({ value, text }) => (
+          <h2 className={styles.gameSummaryTitle}>
+            {i18n('home.gameSummary.summaryTitle')}
+          </h2>
+          <div className={styles.gameSummaryInfo}>
+            {gameInfo.map(({ text, value }) => (
               <div
-                className={styles.gameSummaryLevelBox}
+                className={styles.gameSummaryInfoOption}
                 key={idGenerator(text)}
               >
-                <h2 className={styles.gameSummaryLevelTitle}>{text}</h2>
+                <h3 className={styles.gameSummaryInfoOptionTitle}>{text}</h3>
                 <CountUp
-                  className={styles.gameSummaryLevelNumber}
+                  className={styles.gameSummaryInfoOptionValue}
                   end={value ?? 0}
-                  decimals={playerLevel?.toString().includes('.') ? 2 : 0}
+                  decimals={value?.toString().includes('.') ? 2 : 0}
                   duration={1.5}
                 />
               </div>
             ))}
+          </div>
+
+          <div className={styles.gameSummaryChart}>
+            <Line data={chartData} options={chartOptions} />
           </div>
 
           <MainButton
