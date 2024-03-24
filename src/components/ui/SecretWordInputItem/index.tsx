@@ -48,6 +48,7 @@ export const SecretWordInputItem = ({
       type="text"
       value={secretLetter}
       onChange={handleChange}
+      onFocus={() => setSecretLetter('')}
       ref={inputRef}
     />
   )
