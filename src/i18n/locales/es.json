@@ -32,7 +32,9 @@
       "inputVerifyButtonText": "Comprobar palabra",
       "inputVerifyButtonLoadingText": "Comprobando palabra",
       "cluesTitle": "Pistas:",
-      "cluesDescription": "Perderás 6.5 puntos por cada pista utilizada."
+      "cluesDescription": "Perderás 6.5 puntos por cada pista utilizada.",
+      "popupNextLevel": "¡Felicitaciones, entendiste bien la palabra secreta '%1' y pasaste al nivel %2!",
+      "popupWrongSecretWord": "¡No has descubierto la palabra secreta!"
     },
     "metaData": {
       "pages": {

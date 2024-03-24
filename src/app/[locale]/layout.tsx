@@ -25,10 +25,10 @@ export default async function RootLayout({
   const messages = await getMessages()
 
   return (
-    <LightThemeContextProvider>
-      <GameContextProvider>
-        <html lang={locale}>
-          <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider messages={messages}>
+      <LightThemeContextProvider>
+        <GameContextProvider>
+          <html lang={locale}>
             <head>
               <link
                 rel="shortcut icon"
@@ -41,9 +41,9 @@ export default async function RootLayout({
               <SelectHeader />
               {children}
             </body>
-          </NextIntlClientProvider>
-        </html>
-      </GameContextProvider>
-    </LightThemeContextProvider>
+          </html>
+        </GameContextProvider>
+      </LightThemeContextProvider>
+    </NextIntlClientProvider>
   )
 }

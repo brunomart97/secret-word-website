@@ -2,11 +2,12 @@
 import { createContext, ReactNode, useState, useEffect } from 'react'
 import { getLocalStorage } from '../utils/getLocalStorage'
 import { setLocalStorage } from '../utils/setLocalStorage'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useGetLevelData } from '../hooks/useGetLevelData'
 import { useGetLevelKey } from '../hooks/useGetLevelKey'
 import type { LevelData, LevelKey } from '../typings/Level'
 import type { Language } from '../typings/Zignix'
+import type { InfoPopupData } from '../typings/Popup'
 
 export type GameContextProps = {
   totalPoints?: number
@@ -24,6 +25,8 @@ export type GameContextProps = {
   levelDataLoading?: boolean
   secretWord?: string
   setSecretWord?: (secretWord: string) => void
+  infoPopupData?: InfoPopupData
+  setInfoPopupData?: (infoPopupData: InfoPopupData) => void
   resetGame?: () => void
 }
 
@@ -42,9 +45,17 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
   )
   const [chosenClues, setChosenClues] = useState<string[]>([])
   const [secretWord, setSecretWord] = useState('')
+  const [infoPopupData, setInfoPopupData] = useState<InfoPopupData>({
+    text: '',
+    seconds: 0,
+    type: ''
+  })
 
   //  searching for language
   const locale = useLocale()
+
+  //  searching for translations
+  const i18n = useTranslations('i18n')
 
   // searching for match data
   const { levelData, loading: levelDataLoading } = useGetLevelData(
@@ -146,6 +157,17 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     }
   }, [lastPoints])
 
+  // message in popup
+  useEffect(() => {
+    if (levelKey && !levelKey.keyWasDiscovered) {
+      setInfoPopupData({
+        text: i18n('game.popupWrongSecretWord'),
+        seconds: 10,
+        type: 'fail'
+      })
+    }
+  }, [levelKey])
+
   // reset game function
   const resetGame = () => {
     setTotalPoints(0)
@@ -158,6 +180,11 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
       'lastPoints',
       JSON.stringify(Array.from({ length: 10 }, () => 0))
     )
+    setInfoPopupData({
+      text: '',
+      seconds: 0,
+      type: ''
+    })
   }
 
   return (
@@ -178,6 +205,8 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
         levelDataLoading,
         levelKey,
         levelKeyLoading,
+        infoPopupData,
+        setInfoPopupData,
         resetGame
       }}
     >

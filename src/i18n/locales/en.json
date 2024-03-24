@@ -32,7 +32,9 @@
       "inputVerifyButtonText": "Check word",
       "inputVerifyButtonLoadingText": "Checking word",
       "cluesTitle": "Clues:",
-      "cluesDescription": "You will lose 6.5 points for each clue used."
+      "cluesDescription": "You will lose 6.5 points for each clue used.",
+      "popupNextLevel": "Congratulations, you got the secret word '%1' right and moved to level %2!",
+      "popupWrongSecretWord": "You haven't discovered the secret word!"
     },
     "metaData": {
       "pages": {

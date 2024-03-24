@@ -1,0 +1,23 @@
+.infoPopupContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 16px;
+  border: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  cursor: pointer;
+
+  .infoPopupText {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: start;
+
+    @media (min-width: 905px) {
+      font-size: 14px;
+    }
+  }
+}
