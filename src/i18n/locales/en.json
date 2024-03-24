@@ -33,6 +33,16 @@
       "inputVerifyButtonLoadingText": "Checking word",
       "cluesTitle": "Clues:",
       "cluesDescription": "You will lose 6.5 points for each clue used."
+    },
+    "metaData": {
+      "pages": {
+        "home": {
+          "title": "Zignix | Dashboard"
+        },
+        "game": {
+          "title": "Play"
+        }
+      }
     }
   }
 }

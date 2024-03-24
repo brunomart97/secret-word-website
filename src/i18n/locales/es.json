@@ -33,6 +33,16 @@
       "inputVerifyButtonLoadingText": "Comprobando palabra",
       "cluesTitle": "Pistas:",
       "cluesDescription": "Perderás 6.5 puntos por cada pista utilizada."
+    },
+    "metaData": {
+      "pages": {
+        "home": {
+          "title": "Zignix | Panel"
+        },
+        "game": {
+          "title": "Jugar"
+        }
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+'use client'
 import { useState, useMemo } from 'react'
 import CountUp from 'react-countup'
 import { Line } from 'react-chartjs-2'

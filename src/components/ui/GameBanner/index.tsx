@@ -1,3 +1,4 @@
+'use client'
 import { useTranslations } from 'next-intl'
 import { createSharedPathnamesNavigation } from 'next-intl/navigation'
 import { locales } from '../../../constants/translate'
