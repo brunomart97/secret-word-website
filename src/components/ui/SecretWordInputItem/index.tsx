@@ -1,4 +1,11 @@
-import { useState, useEffect, useRef, ChangeEvent } from 'react'
+import {
+  useState,
+  useEffect,
+  useRef,
+  useLayoutEffect,
+  ChangeEvent,
+  FocusEvent
+} from 'react'
 
 import styles from './styles.module.scss'
 
@@ -22,6 +29,7 @@ export const SecretWordInputItem = ({
   setInputSecretWord
 }: SecretWordInputItemProps) => {
   const [secretLetter, setSecretLetter] = useState(inputSecretWord[index])
+  const [targetValue, setTargetValue] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -31,11 +39,20 @@ export const SecretWordInputItem = ({
   }, [inputSecretWord])
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSecretLetter(event.target.value)
+    const lastLetterTyped =
+      event.target.value.split('').find((letter) => letter !== targetValue) ??
+      targetValue
+    setSecretLetter(lastLetterTyped)
+
     const secretWordCopy = [...inputSecretWord]
-    secretWordCopy[index] = event.target.value
+    secretWordCopy[index] = lastLetterTyped
     setInputSecretWord(secretWordCopy)
     setInputFocusIndex(nextLetterKey === '1' ? index + 1 : index + 2)
+  }
+
+  const handleFocus = (event: FocusEvent<HTMLInputElement>) => {
+    setSecretLetter(event.target.value)
+    setTargetValue(event.target.value)
   }
 
   if (letterKey === '0') {
@@ -48,7 +65,7 @@ export const SecretWordInputItem = ({
       type="text"
       value={secretLetter}
       onChange={handleChange}
-      onFocus={() => setSecretLetter('')}
+      onFocus={handleFocus}
       ref={inputRef}
     />
   )
