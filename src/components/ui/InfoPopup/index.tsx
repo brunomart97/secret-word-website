@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useGame } from '../../../hooks/useGame'
+import { LuInfo } from 'react-icons/lu'
+import { IoCloseOutline } from 'react-icons/io5'
 
 import styles from './styles.module.scss'
 
@@ -35,6 +37,10 @@ export const InfoPopup = () => {
           infoPopupData.type === 'success' ? 'var(--success)' : 'var(--fail)'
       }}
     >
+      <div className={styles.infoPopupHeader}>
+        <LuInfo color="var(--secondary)" />
+        <IoCloseOutline color="var(--secondary)" />
+      </div>
       <span className={styles.infoPopupText}>{infoPopupData.text}</span>
     </button>
   )
