@@ -39,6 +39,47 @@
       "popupNextLevel": "Parabéns, você acertou a palavra secreta '%1', e passou para o nível %2!",
       "popupWrongSecretWord": "Você errou a palavra secreta!"
     },
+    "rules": {
+      "title": "Guia Completo",
+      "ruleList": {
+        "1": {
+          "title": "Iniciando o Jogo",
+          "text": "No Zignix, a jornada começa no nível 1, onde os jogadores são introduzidos ao desafio de decifrar palavras secretas. Ao entrar na página de jogo, eles são saudados com uma série de campos, cada um representando uma letra da palavra secreta. Com 100 pontos iniciais à disposição, os jogadores estão prontos para enfrentar o mistério que os aguarda."
+        },
+        "2": {
+          "title": "Explorando as Pistas",
+          "text": "Dentro do Zignix, os jogadores têm acesso a 16 cartas misteriosas, cada uma guardando uma pista crucial para desvendar a palavra secreta. Cada escolha de carta implica uma perda de 6.5 pontos dos pontos iniciais, então a estratégia é essencial para escolher sabiamente."
+        },
+        "3": {
+          "title": "Desvendando a Palavra Secreta",
+          "text": "O cerne do desafio do Zignix reside na tentativa de decifrar a palavra secreta. Combinando pistas obtidas das cartas com seu próprio conhecimento e intuição, os jogadores podem arriscar suas suposições digitando a palavra nos campos fornecidos. Cada tentativa incorreta resulta em uma pequena penalidade de 2 pontos, incentivando os jogadores a serem precisos em suas escolhas."
+        },
+        "4": {
+          "title": "Avançando de Nível",
+          "text": "A vitória no Zignix não é apenas uma questão de descobrir palavras secretas, mas também de progredir através dos níveis do jogo. Ao acertar a palavra secreta, os jogadores ascendem para o próximo nível, onde desafios mais complexos e palavras mais difíceis os aguardam. É uma jornada de crescimento e superação contínua."
+        },
+        "5": {
+          "title": "Maximizando os Pontos",
+          "text": "No Zignix, acumular pontos é essencial para alcançar o sucesso. Cada partida vencida adiciona pontos ao Total de pontos do jogador, refletindo sua habilidade em resolver os enigmas apresentados. Além disso, a eficiência na utilização das pistas disponíveis pode minimizar a perda de pontos, permitindo que os jogadores alcancem pontuações mais altas ao longo do tempo."
+        },
+        "6": {
+          "title": "Estratégias de Decifração",
+          "text": "Desvendar uma palavra secreta no Zignix requer mais do que simplesmente digitar aleatoriamente letras nos campos. Os jogadores precisam empregar estratégias inteligentes, como identificar padrões nas pistas fornecidas e fazer uso eficaz de seu conhecimento linguístico. Aqueles que conseguem pensar de forma analítica e criativa têm uma vantagem significativa."
+        },
+        "7": {
+          "title": "Superando Desafios Crescentes",
+          "text": "À medida que os jogadores progridem nos níveis do Zignix, eles são confrontados com palavras secretas cada vez mais desafiadoras. Essa progressão gradual de dificuldade mantém o jogo emocionante e envolvente, incentivando os jogadores a continuarem aprimorando suas habilidades e conhecimentos linguísticos."
+        },
+        "8": {
+          "title": "A Importância da Precisão",
+          "text": "No Zignix, a precisão é fundamental. Cada tentativa de adivinhar a palavra secreta deve ser cuidadosamente considerada, pois erros resultam em penalidades de pontos. Os jogadores são desafiados a equilibrar a vontade de arriscar com a necessidade de serem precisos, criando uma experiência de jogo emocionante e estratégica."
+        },
+        "9": {
+          "title": "Celebrando as Conquistas",
+          "text": "No Zignix, cada vitória é uma conquista a ser celebrada. À medida que os jogadores avançam nos níveis, superam desafios e acumulam pontos, têm a oportunidade de sentir um senso de realização e progresso. A jornada pelo mundo das palavras secretas é repleta de momentos emocionantes e gratificantes, tornando cada partida uma experiência memorável."
+        }
+      }
+    },
     "metaData": {
       "pages": {
         "home": {

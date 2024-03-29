@@ -39,6 +39,47 @@
       "popupNextLevel": "¡Felicitaciones, entendiste bien la palabra secreta '%1' y pasaste al nivel %2!",
       "popupWrongSecretWord": "¡Te equivocaste con la palabra secreta!"
     },
+    "rules": {
+      "title": "Guía Completa",
+      "ruleList": {
+        "1": {
+          "title": "Comenzando el Juego",
+          "text": "En Zignix, el viaje comienza en el nivel 1, donde los jugadores son introducidos al desafío de descifrar palabras secretas. Al entrar en la página del juego, son recibidos con una serie de campos, cada uno representando una letra de la palabra secreta. Con 100 puntos iniciales disponibles, los jugadores están listos para enfrentar el misterio que les espera."
+        },
+        "2": {
+          "title": "Explorando las Pistas",
+          "text": "Dentro de Zignix, los jugadores tienen acceso a 16 cartas misteriosas, cada una guardando una pista crucial para desentrañar la palabra secreta. Cada elección de carta implica una pérdida de 6.5 puntos de los puntos iniciales, por lo que la estrategia es esencial para elegir sabiamente."
+        },
+        "3": {
+          "title": "Descifrando la Palabra Secreta",
+          "text": "El desafío principal de Zignix radica en intentar descifrar la palabra secreta. Combinando pistas obtenidas de las cartas con su propio conocimiento e intuición, los jugadores pueden arriesgar sus suposiciones escribiendo la palabra en los campos proporcionados. Cada intento incorrecto resulta en una pequeña penalización de 2 puntos, lo que incentiva a los jugadores a ser precisos en sus elecciones."
+        },
+        "4": {
+          "title": "Avanzando al Siguiente Nivel",
+          "text": "La victoria en Zignix no es solo cuestión de descubrir palabras secretas, sino también de avanzar a través de los niveles del juego. Al adivinar correctamente la palabra secreta, los jugadores ascienden al siguiente nivel, donde les esperan desafíos más complejos y palabras más difíciles. Es un viaje de crecimiento y superación continua."
+        },
+        "5": {
+          "title": "Maximizando los Puntos",
+          "text": "En Zignix, acumular puntos es esencial para el éxito. Cada partida ganada suma puntos al Total de puntos del jugador, reflejando su capacidad para resolver los enigmas presentados. Además, utilizar eficientemente las pistas disponibles puede minimizar la pérdida de puntos, permitiendo que los jugadores obtengan puntajes más altos con el tiempo."
+        },
+        "6": {
+          "title": "Estrategias de Descifrado",
+          "text": "Descifrar una palabra secreta en Zignix requiere más que simplemente escribir letras al azar en los campos. Los jugadores deben emplear estrategias inteligentes, como identificar patrones en las pistas proporcionadas y hacer un uso efectivo de su conocimiento lingüístico. Aquellos que pueden pensar de manera analítica y creativa tienen una ventaja significativa."
+        },
+        "7": {
+          "title": "Superando Desafíos Crecientes",
+          "text": "A medida que los jugadores avanzan en los niveles de Zignix, se enfrentan a palabras secretas cada vez más desafiantes. Esta progresión gradual de dificultad mantiene el juego emocionante y envolvente, alentando a los jugadores a continuar mejorando sus habilidades y conocimientos lingüísticos."
+        },
+        "8": {
+          "title": "La Importancia de la Precisión",
+          "text": "En Zignix, la precisión es fundamental. Cada intento de adivinar la palabra secreta debe ser cuidadosamente considerado, ya que los errores resultan en penalizaciones de puntos. Los jugadores se enfrentan al desafío de equilibrar el deseo de correr riesgos con la necesidad de ser precisos, creando una experiencia de juego emocionante y estratégica."
+        },
+        "9": {
+          "title": "Celebrando los Logros",
+          "text": "En Zignix, cada victoria es un logro que debe ser celebrado. A medida que los jugadores avanzan en los niveles, superan desafíos y acumulan puntos, tienen la oportunidad de sentir un sentido de logro y progreso. El viaje a través del mundo de las palabras secretas está lleno de momentos emocionantes y gratificantes, haciendo que cada partida sea una experiencia memorable."
+        }
+      }
+    },
     "metaData": {
       "pages": {
         "home": {

@@ -39,6 +39,47 @@
       "popupNextLevel": "Congratulations, you got the secret word '%1' right and moved to level %2!",
       "popupWrongSecretWord": "You got the secret word wrong!"
     },
+    "rules": {
+      "title": "Complete Guide",
+      "ruleList": {
+        "1": {
+          "title": "Starting the Game",
+          "text": "In Zignix, the journey begins at level 1, where players are introduced to the challenge of deciphering secret words. Upon entering the game page, they are greeted with a series of fields, each representing a letter of the secret word. With 100 initial points available, players are ready to face the mystery that awaits."
+        },
+        "2": {
+          "title": "Exploring the Clues",
+          "text": "Within Zignix, players have access to 16 mysterious cards, each holding a crucial clue to unravel the secret word. Each card choice implies a loss of 6.5 points from the initial points, so strategy is essential to choose wisely."
+        },
+        "3": {
+          "title": "Unraveling the Secret Word",
+          "text": "The core challenge of Zignix lies in attempting to decipher the secret word. By combining clues obtained from the cards with their own knowledge and intuition, players can risk their guesses by typing the word into the provided fields. Each incorrect attempt results in a small penalty of 2 points, encouraging players to be precise in their choices."
+        },
+        "4": {
+          "title": "Advancing to the Next Level",
+          "text": "Victory in Zignix is not just a matter of discovering secret words, but also of progressing through the levels of the game. By correctly guessing the secret word, players ascend to the next level, where more complex challenges and harder words await them. It's a journey of continuous growth and overcoming."
+        },
+        "5": {
+          "title": "Maximizing Points",
+          "text": "In Zignix, accumulating points is essential for success. Each won match adds points to the player's Total Points, reflecting their ability to solve the presented puzzles. Furthermore, efficiently using the available clues can minimize point loss, allowing players to achieve higher scores over time."
+        },
+        "6": {
+          "title": "Deciphering Strategies",
+          "text": "Deciphering a secret word in Zignix requires more than simply typing random letters into the fields. Players need to employ smart strategies, such as identifying patterns in the provided clues and making effective use of their linguistic knowledge. Those who can think analytically and creatively have a significant advantage."
+        },
+        "7": {
+          "title": "Overcoming Increasing Challenges",
+          "text": "As players progress through the levels of Zignix, they are faced with increasingly challenging secret words. This gradual progression of difficulty keeps the game exciting and engaging, encouraging players to continue refining their skills and linguistic knowledge."
+        },
+        "8": {
+          "title": "The Importance of Accuracy",
+          "text": "In Zignix, accuracy is paramount. Every attempt to guess the secret word must be carefully considered, as errors result in point penalties. Players are challenged to balance the desire to take risks with the need to be accurate, creating an exciting and strategic gaming experience."
+        },
+        "9": {
+          "title": "Celebrating Achievements",
+          "text": "In Zignix, every victory is a achievement to be celebrated. As players advance through the levels, overcome challenges, and accumulate points, they have the opportunity to feel a sense of accomplishment and progress. The journey through the world of secret words is filled with exciting and rewarding moments, making each match a memorable experience."
+        }
+      }
+    },
     "metaData": {
       "pages": {
         "home": {
