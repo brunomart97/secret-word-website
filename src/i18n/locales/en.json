@@ -4,7 +4,7 @@
       "menuOptions": {
         "home": { "text": "Dashboard", "link": "/" },
         "game": { "text": "Play", "link": "/game" },
-        "about": { "text": "About", "link": "/about" }
+        "about": { "text": "Rules", "link": "/rules" }
       },
       "footer": {
         "copyrightText": "All rights reserved."

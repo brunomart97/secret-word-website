@@ -8,5 +8,5 @@ export default createMiddleware({
 })
 
 export const config = {
-  matcher: ['/', '/game', '/about', '/(en|pt|es)/:path*']
+  matcher: ['/', '/game', '/rules', '/(en|pt|es)/:path*']
 }

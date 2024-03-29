@@ -4,7 +4,7 @@
       "menuOptions": {
         "home": { "text": "Panel", "link": "/" },
         "game": { "text": "Jugar", "link": "/game" },
-        "about": { "text": "Sobre", "link": "/about" }
+        "about": { "text": "Reglas", "link": "/rules" }
       },
       "footer": {
         "copyrightText": "Todos los derechos reservados."
