@@ -24,6 +24,10 @@
         "resetModalSubtitle": "Esta acción hará que pierdas todo el progreso del juego guardado.",
         "resetModalButtonReset": "Reiniciar",
         "resetModalButtonCancel": "Cancelar"
+      },
+      "doubtBanner": {
+        "title": "Accede a la Guía Completa",
+        "subtitle": "y aprende todo sobre el juego"
       }
     },
     "game": {

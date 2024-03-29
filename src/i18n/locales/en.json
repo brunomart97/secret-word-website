@@ -24,6 +24,10 @@
         "resetModalSubtitle": "This action will cause you to lose all saved game progress.",
         "resetModalButtonReset": "Reset",
         "resetModalButtonCancel": "Cancel"
+      },
+      "doubtBanner": {
+        "title": "Access the Complete Guide",
+        "subtitle": "and learn everything about the game"
       }
     },
     "game": {
