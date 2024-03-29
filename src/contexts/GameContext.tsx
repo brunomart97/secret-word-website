@@ -89,6 +89,8 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
       setChosenClues([])
       setPlayerLevel(playerLevel + 1)
       return
+    } else {
+      setMatchPoints(matchPoints - 2)
     }
   }, [levelKey])
 
