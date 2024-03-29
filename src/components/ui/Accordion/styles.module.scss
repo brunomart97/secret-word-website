@@ -1,0 +1,29 @@
+.accordionContainer {
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 5px;
+
+  .accordionButton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    .accordionTitle {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--tertiary);
+    }
+  }
+
+  .accordionText {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--tertiary);
+    padding: 0 16px 16px;
+  }
+}

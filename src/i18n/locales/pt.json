@@ -77,6 +77,14 @@
         "9": {
           "title": "Celebrando as Conquistas",
           "text": "No Zignix, cada vitória é uma conquista a ser celebrada. À medida que os jogadores avançam nos níveis, superam desafios e acumulam pontos, têm a oportunidade de sentir um senso de realização e progresso. A jornada pelo mundo das palavras secretas é repleta de momentos emocionantes e gratificantes, tornando cada partida uma experiência memorável."
+        },
+        "10": {
+          "title": "Gráfico de Pontuações",
+          "text": "Nosso jogo apresenta um gráfico dinâmico que exibe as pontuações alcançadas nos 10 últimos níveis pelo jogador. Este gráfico proporciona uma visão clara das conquistas recentes do jogador, permitindo acompanhar o progresso ao longo do tempo. Cada ponto no gráfico representa a pontuação alcançada em um determinado nível, oferecendo uma representação clara do desempenho do jogador e destacando áreas de melhoria ou sucesso contínuo. Utilizamos este recurso para motivar os jogadores, incentivando-os a superar seus próprios recordes e aprimorar suas habilidades ao longo do jogo."
+        },
+        "11": {
+          "title": "Reiniciar Jogo",
+          "text": "Na página inicial, disponibilizamos um botão de reiniciar o jogo que oferece aos jogadores a opção de recomeçar sua jornada no Zignix. Ao clicar neste botão, o jogo é resetado, e o jogador é apresentado com novas palavras secretas para decifrar, proporcionando uma experiência renovada e desafiadora. Esta funcionalidade é especialmente útil para jogadores que desejam começar novamente ou para aqueles que desejam experimentar novamente o processo de decifrar palavras secretas."
         }
       }
     },

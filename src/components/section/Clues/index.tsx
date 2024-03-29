@@ -1,5 +1,4 @@
 'use client'
-import { useState } from 'react'
 import { useGame } from '../../../hooks/useGame'
 import { idGenerator } from '../../../utils/idGenerator'
 import { useTranslations } from 'next-intl'

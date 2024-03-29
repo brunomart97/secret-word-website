@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import { RuleBox } from '../../../components/section/RuleBox'
 import type { Locale } from '../../../typings/Translate'
 
 import styles from './styles.module.scss'
@@ -18,7 +19,7 @@ export async function generateMetadata({
 export default function Rules() {
   return (
     <main className={styles.rulesContainer}>
-      <h1>Rules</h1>
+      <RuleBox />
     </main>
   )
 }

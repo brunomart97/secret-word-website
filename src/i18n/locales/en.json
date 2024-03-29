@@ -77,6 +77,14 @@
         "9": {
           "title": "Celebrating Achievements",
           "text": "In Zignix, every victory is a achievement to be celebrated. As players advance through the levels, overcome challenges, and accumulate points, they have the opportunity to feel a sense of accomplishment and progress. The journey through the world of secret words is filled with exciting and rewarding moments, making each match a memorable experience."
+        },
+        "10": {
+          "title": "Score Chart",
+          "text": "Our game features a dynamic chart that displays the scores achieved in the last 10 levels by the player. This chart provides a clear view of the player's recent achievements, allowing them to track their progress over time. Each point on the chart represents the score achieved at a particular level, offering a clear representation of the player's performance and highlighting areas for improvement or ongoing success. We use this feature to motivate players, encouraging them to surpass their own records and improve their skills throughout the game."
+        },
+        "11": {
+          "title": "Restart Game",
+          "text": "On the homepage, we provide a restart button that allows players to restart their journey in Zignix. Clicking on this button resets the game, and the player is presented with new secret words to decipher, providing a refreshed and challenging experience. This functionality is especially useful for players who want to start anew or for those who wish to experience the process of deciphering secret words again without losing the history of their points or previous levels."
         }
       }
     },
