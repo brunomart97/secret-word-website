@@ -5,6 +5,9 @@
         "home": { "text": "Painel", "link": "/" },
         "game": { "text": "Jogar", "link": "/game" },
         "about": { "text": "Sobre", "link": "/about" }
+      },
+      "footer": {
+        "copyrightText": "Todos os direitos reservados."
       }
     },
     "home": {
@@ -34,7 +37,7 @@
       "cluesTitle": "Pistas:",
       "cluesDescription": "Você perderá 6.5 pontos por cada pista usada.",
       "popupNextLevel": "Parabéns, você acertou a palavra secreta '%1', e passou para o nível %2!",
-      "popupWrongSecretWord": "Você não descobriu a palavra secreta!"
+      "popupWrongSecretWord": "Você errou a palavra secreta!"
     },
     "metaData": {
       "pages": {

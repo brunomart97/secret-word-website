@@ -1,6 +1,7 @@
 import { LightThemeContextProvider } from '../../contexts/LightThemeContext'
 import { GameContextProvider } from '../../contexts/GameContext'
 import { SelectHeader } from '../../components/common/SelectHeader'
+import { Footer } from '../../components/common/Footer'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import type { ReactNode } from 'react'
@@ -40,6 +41,7 @@ export default async function RootLayout({
             <body>
               <SelectHeader />
               {children}
+              <Footer />
             </body>
           </html>
         </GameContextProvider>

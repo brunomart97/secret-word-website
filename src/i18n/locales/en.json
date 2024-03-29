@@ -5,6 +5,9 @@
         "home": { "text": "Dashboard", "link": "/" },
         "game": { "text": "Play", "link": "/game" },
         "about": { "text": "About", "link": "/about" }
+      },
+      "footer": {
+        "copyrightText": "All rights reserved."
       }
     },
     "home": {
@@ -34,7 +37,7 @@
       "cluesTitle": "Clues:",
       "cluesDescription": "You will lose 6.5 points for each clue used.",
       "popupNextLevel": "Congratulations, you got the secret word '%1' right and moved to level %2!",
-      "popupWrongSecretWord": "You haven't discovered the secret word!"
+      "popupWrongSecretWord": "You got the secret word wrong!"
     },
     "metaData": {
       "pages": {
