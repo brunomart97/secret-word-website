@@ -1,0 +1,12 @@
+.rulesContainer {
+  width: 100%;
+  max-width: 1212px;
+  min-height: calc(100vh - 349px);
+  padding: 0 16px;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  @media (min-width: 905px) {
+    margin-top: 80px;
+  }
+}

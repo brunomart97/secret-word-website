@@ -46,6 +46,9 @@
         },
         "game": {
           "title": "Play"
+        },
+        "rules": {
+          "title": "Rules"
         }
       }
     }

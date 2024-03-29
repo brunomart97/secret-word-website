@@ -46,6 +46,9 @@
         },
         "game": {
           "title": "Jugar"
+        },
+        "rules": {
+          "title": "Reglas"
         }
       }
     }
