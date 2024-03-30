@@ -77,7 +77,6 @@ export const MobileHeader = () => {
         </nav>
 
         <div className={styles.optionsButtons}>
-          <ThemeButton />
           <LanguageButton />
         </div>
       </div>

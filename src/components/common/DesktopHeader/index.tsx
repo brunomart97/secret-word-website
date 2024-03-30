@@ -48,7 +48,6 @@ export const DesktopHeader = () => {
         </nav>
 
         <div className={styles.optionsButtons}>
-          <ThemeButton />
           <LanguageButton />
         </div>
       </div>
