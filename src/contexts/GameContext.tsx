@@ -1,5 +1,5 @@
 'use client'
-import { createContext, ReactNode, useState, useEffect } from 'react'
+import { createContext, ReactNode, useState, useEffect, useMemo } from 'react'
 import { getLocalStorage } from '../utils/getLocalStorage'
 import { setLocalStorage } from '../utils/setLocalStorage'
 import { useLocale, useTranslations } from 'next-intl'
@@ -27,6 +27,7 @@ export type GameContextProps = {
   setSecretWord?: (secretWord: string) => void
   infoPopupData?: InfoPopupData
   setInfoPopupData?: (infoPopupData: InfoPopupData) => void
+  gameIsOver?: boolean
   resetGame?: () => void
 }
 
@@ -63,6 +64,12 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     playerLevel
   )
 
+  // getting the last level
+  const gameIsOver = useMemo(
+    () => !!(levelData?.lastLevel && playerLevel > levelData?.lastLevel),
+    [levelDataLoading]
+  )
+
   // checking the secret word
   const { levelKey, loading: levelKeyLoading } = useGetLevelKey(
     locale as Language,
@@ -88,6 +95,7 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
       setSecretWord('')
       setChosenClues([])
       setPlayerLevel(playerLevel + 1)
+
       return
     } else {
       setMatchPoints(matchPoints - 2)
@@ -209,6 +217,7 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
         levelKeyLoading,
         infoPopupData,
         setInfoPopupData,
+        gameIsOver,
         resetGame
       }}
     >

@@ -41,7 +41,13 @@
       "cluesTitle": "Pistas:",
       "cluesDescription": "Perderás 6.5 puntos por cada pista utilizada.",
       "popupNextLevel": "¡Felicitaciones, entendiste bien la palabra secreta '%1' y pasaste al nivel %2!",
-      "popupWrongSecretWord": "¡Te equivocaste con la palabra secreta!"
+      "popupWrongSecretWord": "¡Te equivocaste con la palabra secreta!",
+      "gameOver": {
+        "gameOverTitle": "¡Felicitaciones,",
+        "gameOverSubtitle": "has conquistado todas las etapas del juego!",
+        "gameOverText": "Demostraste habilidad y destreza al completar cada desafío. ¡Pero la diversión no tiene por qué terminar aquí! Reinicia el juego para embarcarte en una experiencia completamente única. Con nuevas etapas y desafíos, tendrás la oportunidad de poner a prueba tus habilidades de maneras aún más emocionantes. ¡Prepárate para explorar nuevas pistas, enfrentar nuevos desafíos y sumergirte en una aventura renovada! Estamos emocionados de ver hasta dónde puedes llegar. ¡Buena suerte y diviertete!",
+        "gameOverResetButtonText": "Empezar con nuevas etapas"
+      }
     },
     "rules": {
       "title": "Guía Completa",

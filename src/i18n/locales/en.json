@@ -41,7 +41,13 @@
       "cluesTitle": "Clues:",
       "cluesDescription": "You will lose 6.5 points for each clue used.",
       "popupNextLevel": "Congratulations, you got the secret word '%1' right and moved to level %2!",
-      "popupWrongSecretWord": "You got the secret word wrong!"
+      "popupWrongSecretWord": "You got the secret word wrong!",
+      "gameOver": {
+        "gameOverTitle": "Congratulations,",
+        "gameOverSubtitle": "you have conquered all stages of the game!",
+        "gameOverText": "You demonstrated skill and dexterity by completing each challenge. But the fun doesn't have to stop here! Restart the game to embark on a completely unique experience. With new stages and challenges, you'll have the opportunity to test your skills in even more exciting ways. Get ready to explore new tracks, face new challenges and dive into a renewed adventure! We're excited to see how far you can go. Good luck and have fun!",
+        "gameOverResetButtonText": "Start over with new phases"
+      }
     },
     "rules": {
       "title": "Complete Guide",

@@ -1,7 +1,8 @@
 export type LevelData = {
-  clues: string[]
-  keyMold: string
   id: string
+  keyMold: string
+  clues: string[]
+  lastLevel: number
 }
 
 export type LevelKey = {

@@ -41,7 +41,13 @@
       "cluesTitle": "Pistas:",
       "cluesDescription": "Você perderá 6.5 pontos por cada pista usada.",
       "popupNextLevel": "Parabéns, você acertou a palavra secreta '%1', e passou para o nível %2!",
-      "popupWrongSecretWord": "Você errou a palavra secreta!"
+      "popupWrongSecretWord": "Você errou a palavra secreta!",
+      "gameOver": {
+        "gameOverTitle": "Parabéns,",
+        "gameOverSubtitle": "você conquistou todas as fases do jogo!",
+        "gameOverText": "Você demonstrou habilidade e destreza ao completar cada desafio. Mas a diversão não precisa parar por aqui! Recomece o jogo para embarcar em uma experiência totalmente única. Com novas fases e desafios, você terá a oportunidade de testar suas habilidades de maneiras ainda mais emocionantes. Prepare-se para explorar novas pistas, enfrentar desafios inéditos e mergulhar em uma aventura renovada! Estamos ansiosos para ver até onde você pode chegar. Boa sorte e divirta-se!",
+        "gameOverResetButtonText": "Recomeçar com novas fases"
+      }
     },
     "rules": {
       "title": "Guia Completo",
