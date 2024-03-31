@@ -1,3 +1,4 @@
+import { Poppins } from 'next/font/google'
 import { LightThemeContextProvider } from '../../contexts/LightThemeContext'
 import { GameContextProvider } from '../../contexts/GameContext'
 import { SelectHeader } from '../../components/common/SelectHeader'
@@ -8,6 +9,13 @@ import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
 
 import '../../styles/global.scss'
+
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-poppins'
+})
 
 export const metadata: Metadata = {
   title: {
@@ -38,7 +46,7 @@ export default async function RootLayout({
               />
             </head>
 
-            <body>
+            <body className={poppins.className}>
               <SelectHeader />
               {children}
               <Footer />

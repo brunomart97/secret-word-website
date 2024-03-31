@@ -1,1 +1,1 @@
-export const ZIGNIX_API_URL = 'http://localhost:3333/api'
+export const ZIGNIX_API_URL = 'https://zignix-api.vercel.app/api'
