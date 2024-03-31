@@ -40,6 +40,8 @@
       "inputVerifyButtonLoadingText": "Verificando palavra",
       "cluesTitle": "Pistas:",
       "cluesDescription": "Você perderá 6.5 pontos por cada pista usada.",
+      "skipLevel": "Pular nível",
+      "skipLevelDescription": "Ao pular de nível, você perderá 20 pontos do Total de Pontos.",
       "popupNextLevel": "Parabéns, você acertou a palavra secreta '%1', e passou para o nível %2!",
       "popupWrongSecretWord": "Você errou a palavra secreta!",
       "gameOver": {

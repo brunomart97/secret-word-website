@@ -1,9 +1,11 @@
 'use client'
+import { useMemo } from 'react'
 import { useGame } from '../../../hooks/useGame'
 import { idGenerator } from '../../../utils/idGenerator'
 import { useTranslations } from 'next-intl'
 import { ClueCard } from '../../ui/ClueCard'
 import { Skeleton } from '../../ui/Skeleton'
+import { MainButton } from '../../ui/MainButton'
 
 import styles from './styles.module.scss'
 
@@ -14,9 +16,17 @@ export const Clues = () => {
     chosenClues,
     setChosenClues,
     matchPoints,
-    setMatchPoints
+    setMatchPoints,
+    goToNextLevel,
+    setLastLevelSkipped,
+    totalPoints,
+    setTotalPoints
   } = useGame()
   const i18n = useTranslations('i18n')
+  const hasNoPoints = useMemo(
+    () => typeof matchPoints !== 'undefined' && matchPoints <= 0,
+    [matchPoints]
+  )
 
   return (
     <section className={styles.cluesContainer}>
@@ -24,6 +34,25 @@ export const Clues = () => {
       <span className={styles.cluesDescription}>
         {i18n('game.cluesDescription')}
       </span>
+
+      {hasNoPoints && (
+        <div className={styles.cluesSkipLevel}>
+          <MainButton
+            text={i18n('game.skipLevel')}
+            action={() => {
+              goToNextLevel?.()
+              setLastLevelSkipped?.(true)
+              totalPoints && setTotalPoints?.(totalPoints - 20)
+            }}
+            color="var(--secondary)"
+            backgroundColor="var(--splash)"
+          />
+          <span className={styles.cluesSkipLevelDescription}>
+            {i18n('game.skipLevelDescription')}
+          </span>
+        </div>
+      )}
+
       <div className={styles.cluesSubcontainer}>
         {levelDataLoading ? (
           <>

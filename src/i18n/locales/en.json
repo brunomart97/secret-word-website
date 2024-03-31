@@ -40,6 +40,8 @@
       "inputVerifyButtonLoadingText": "Checking word",
       "cluesTitle": "Clues:",
       "cluesDescription": "You will lose 6.5 points for each clue used.",
+      "skipLevel": "Skip level",
+      "skipLevelDescription": "When you skip a level, you will lose 20 points from your total points.",
       "popupNextLevel": "Congratulations, you got the secret word '%1' right and moved to level %2!",
       "popupWrongSecretWord": "You got the secret word wrong!",
       "gameOver": {

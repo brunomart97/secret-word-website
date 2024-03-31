@@ -11,8 +11,14 @@ import { useEffect } from 'react'
 
 export const Scorebox = () => {
   const i18n = useTranslations('i18n')
-  const { playerLevel, matchPoints, totalPoints, levelKey, setInfoPopupData } =
-    useGame()
+  const {
+    playerLevel,
+    matchPoints,
+    totalPoints,
+    levelKey,
+    setInfoPopupData,
+    lastLevelSkipped
+  } = useGame()
   const [lastPlayerLevel, setLastPlayerLevel] = useState(playerLevel ?? 1)
 
   const scoreList = [
@@ -38,7 +44,8 @@ export const Scorebox = () => {
     if (
       playerLevel &&
       playerLevel > lastPlayerLevel &&
-      levelKey?.keyWasDiscovered
+      levelKey?.keyWasDiscovered &&
+      !lastLevelSkipped
     ) {
       const formatedPopupText = i18n('game.popupNextLevel')
         .replace('%1', levelKey.key)

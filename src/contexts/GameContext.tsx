@@ -27,7 +27,10 @@ export type GameContextProps = {
   setSecretWord?: (secretWord: string) => void
   infoPopupData?: InfoPopupData
   setInfoPopupData?: (infoPopupData: InfoPopupData) => void
+  lastLevelSkipped?: boolean
+  setLastLevelSkipped?: (lastLevelSkipped: boolean) => void
   gameIsOver?: boolean
+  goToNextLevel?: () => void
   resetGame?: () => void
 }
 
@@ -51,6 +54,7 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     seconds: 0,
     type: ''
   })
+  const [lastLevelSkipped, setLastLevelSkipped] = useState(false)
 
   //  searching for language
   const locale = useLocale()
@@ -77,26 +81,32 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
     secretWord
   )
 
+  // passing the level
+  const goToNextLevel = () => {
+    // record the last score
+    const lastPointsCopy = [...lastPoints]
+    lastPointsCopy.shift()
+    lastPointsCopy.push(matchPoints)
+    setLastPoints(lastPointsCopy)
+
+    // cleaning up the states
+    setTotalPoints(totalPoints + matchPoints)
+    setMatchPoints(100)
+    setSecretWord('')
+    setChosenClues([])
+    setPlayerLevel(playerLevel + 1)
+
+    return
+  }
+
   useEffect(() => {
     if (!levelKey) {
       return
     }
 
     if (levelKey.keyWasDiscovered && levelKey.key !== 'unacceptable') {
-      // record the last score
-      const lastPointsCopy = [...lastPoints]
-      lastPointsCopy.shift()
-      lastPointsCopy.push(matchPoints)
-      setLastPoints(lastPointsCopy)
-
-      // cleaning up the states
-      setTotalPoints(totalPoints + matchPoints)
-      setMatchPoints(100)
-      setSecretWord('')
-      setChosenClues([])
-      setPlayerLevel(playerLevel + 1)
-
-      return
+      goToNextLevel()
+      setLastLevelSkipped(false)
     } else {
       setMatchPoints(matchPoints - 2)
     }
@@ -217,7 +227,10 @@ export const GameContextProvider = ({ children }: GameProviderProps) => {
         levelKeyLoading,
         infoPopupData,
         setInfoPopupData,
+        lastLevelSkipped,
+        setLastLevelSkipped,
         gameIsOver,
+        goToNextLevel,
         resetGame
       }}
     >

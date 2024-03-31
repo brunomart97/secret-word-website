@@ -40,6 +40,8 @@
       "inputVerifyButtonLoadingText": "Comprobando palabra",
       "cluesTitle": "Pistas:",
       "cluesDescription": "Perderás 6.5 puntos por cada pista utilizada.",
+      "skipLevel": "Saltar nivel",
+      "skipLevelDescription": "Cuando te saltes un nivel, perderás 20 puntos de tu Total de Puntos.",
       "popupNextLevel": "¡Felicitaciones, entendiste bien la palabra secreta '%1' y pasaste al nivel %2!",
       "popupWrongSecretWord": "¡Te equivocaste con la palabra secreta!",
       "gameOver": {
