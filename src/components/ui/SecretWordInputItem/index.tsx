@@ -33,7 +33,11 @@ export const SecretWordInputItem = ({
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    if (index === inputFocusIndex && letterKey === '1') {
+    if (
+      index === inputFocusIndex &&
+      letterKey === '1' &&
+      inputSecretWord.length > 0
+    ) {
       inputRef?.current?.focus()
     }
   }, [inputSecretWord])

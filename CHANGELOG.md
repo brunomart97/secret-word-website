@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2024-04-01
+
+### Added
+
+- [SEO] - Creating and configuring the robots.txt file;
+- [SEO] - Creating and configuring the sitemap.xml file;
+
+### Fixed
+
+- [Page] - Fixed auto focus on input when opening a clue card;
+
 ## [1.0.1] - 2024-03-31
 
 ### Fixed

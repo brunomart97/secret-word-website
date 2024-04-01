@@ -13,7 +13,14 @@ export async function generateMetadata({
   const i18n = await getTranslations({ locale, namespace: 'i18n' })
 
   return {
-    title: i18n('metaData.pages.home.title')
+    title: i18n('metaData.pages.home.title'),
+    robots: {
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true
+      }
+    }
   }
 }
 
