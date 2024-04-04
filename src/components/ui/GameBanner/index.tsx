@@ -17,8 +17,8 @@ export const GameBanner = () => {
     <div className={styles.gameBannerContainer}>
       <div className={styles.gameBannerSubcontainer}>
         <div className={styles.gameBannerLeftContent}>
-          <h2>{i18n('home.gameBanner.title')}</h2>
-          <h3>{i18n('home.gameBanner.subtitle')}</h3>
+          <h1>{i18n('home.gameBanner.title')}</h1>
+          <h2>{i18n('home.gameBanner.subtitle')}</h2>
           <p>{i18n('home.gameBanner.text')}</p>
           <MainButton
             text={i18n('home.gameBanner.buttonText')}

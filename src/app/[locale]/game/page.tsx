@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { LevelCheck } from '../../../components/section/LevelCheck'
+import type { Metadata } from 'next'
 import type { Locale } from '../../../typings/Translate'
 
 import styles from './styles.module.scss'
@@ -13,7 +14,7 @@ export async function generateMetadata({
 
   return {
     title: i18n('metaData.pages.game.title')
-  }
+  } as Metadata
 }
 
 export default function Game() {

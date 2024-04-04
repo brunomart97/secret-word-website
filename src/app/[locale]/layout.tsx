@@ -5,8 +5,10 @@ import { SelectHeader } from '../../components/common/SelectHeader'
 import { Footer } from '../../components/common/Footer'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import { getTranslations } from 'next-intl/server'
 import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
+import type { Locale } from '../../typings/Translate'
 
 import '../../styles/global.scss'
 
@@ -17,11 +19,36 @@ const poppins = Poppins({
   variable: '--font-poppins'
 })
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Zignix',
-    template: 'Zignix | %s'
-  }
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: Locale }
+}) {
+  const i18n = await getTranslations({ locale, namespace: 'i18n' })
+
+  return {
+    title: {
+      default: 'Zignix',
+      template: 'Zignix | %s'
+    },
+    description: i18n('metaData.pages.home.description'),
+    keywords: i18n('metaData.pages.home.keywords'),
+    robots: {
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true
+      }
+    },
+    openGraph: {
+      title: i18n('metaData.pages.home.title'),
+      description: i18n('metaData.pages.home.description'),
+      images: 'https://www.zignix.com/logos/zignix-pink-logo.svg',
+      type: 'website',
+      siteName: 'Zignix',
+      url: 'https://www.zignix.com'
+    }
+  } as Metadata
 }
 
 export default async function RootLayout({

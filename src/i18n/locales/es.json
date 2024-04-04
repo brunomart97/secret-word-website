@@ -103,7 +103,9 @@
     "metaData": {
       "pages": {
         "home": {
-          "title": "Zignix | Desentraña acertijos y sumérgete en una aventura de palabras"
+          "title": "Zignix | Desentraña acertijos y sumérgete en una aventura de palabras",
+          "keywords": "Zignix, Juego, Juego de palabras, Juegos educativos, Enigmas, Juego de estrategia, Entretenimiento educativo, Razonamiento, Desafíos de lógica, Juegos de razonamiento, Diversión cerebral, Desafío de palabras en línea, Rompecabezas, Juego de aventura",
+          "description": "Explora un mundo de desafíos verbales con Zignix. Este envolvente juego de palabras pondrá a prueba tu habilidad para descifrar enigmas, estrategia lingüística y razonamiento lógico. Supera niveles, acumula puntos y sumérgete en una aventura cerebral única."
         },
         "game": {
           "title": "Jugar"
