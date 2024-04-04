@@ -103,7 +103,9 @@
     "metaData": {
       "pages": {
         "home": {
-          "title": "Zignix | Unravel riddles and dive into a word adventure"
+          "title": "Zignix | Unravel riddles and dive into a word adventure",
+          "keywords": "Zignix, Game, Word game, Educational games, Riddles, Strategy game, Educational entertainment, Reasoning, Logic challenges, Logic games, Brain fun, Online word challenge, Puzzle, Adventure game",
+          "description": "Explore a world of verbal challenges with Zignix. This engaging word game will test your ability to decipher puzzles, linguistic strategy, and logical reasoning. Overcome levels, accumulate points, and immerse yourself in a unique cerebral adventure."
         },
         "game": {
           "title": "Play"

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2024-04-04
+
+### Added
+
+- [SEO] - New meta tags for SEO;
+
 ## [1.2.0] - 2024-04-02
 
 ### Added
